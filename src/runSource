@@ -1,0 +1,108 @@
+#!/bin/bash
+
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==================================ORIGINAL===================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+gcc -o Tests/build/printd.o -c Tests/printd.c
+
+echo "
+Tests/add.c"
+gcc -o Tests/build/add Tests/add.c Tests/build/printd.o
+./Tests/build/add
+
+echo "
+Tests/break.c"
+gcc -o Tests/build/break Tests/break.c Tests/build/printd.o
+./Tests/build/break
+
+echo "
+Tests/compteur.c"
+gcc -o Tests/build/compteur Tests/compteur.c Tests/build/printd.o
+./Tests/build/compteur
+
+echo "
+Tests/cond.c"
+gcc -o Tests/build/cond Tests/cond.c Tests/build/printd.o
+./Tests/build/cond
+
+echo "
+Tests/div.c"
+gcc -o Tests/build/div Tests/div.c Tests/build/printd.o
+./Tests/build/div
+
+echo "
+Tests/exempleCfe.c"
+gcc -o Tests/build/exempleCfe Tests/exempleCfe.c Tests/build/printd.o
+./Tests/build/exempleCfe
+
+echo "
+Tests/expr.c"
+gcc -o Tests/build/expr Tests/expr.c Tests/build/printd.o
+./Tests/build/expr
+
+echo "
+Tests/functions.c"
+gcc -o Tests/build/functions Tests/functions.c Tests/build/printd.o
+./Tests/build/functions
+
+echo "
+Tests/loops.c"
+gcc -o Tests/build/loops Tests/loops.c Tests/build/printd.o
+./Tests/build/loops
+
+echo "
+Tests/lsh.c"
+gcc -o Tests/build/lsh Tests/lsh.c Tests/build/printd.o
+./Tests/build/lsh
+
+echo "
+Tests/mul.c"
+gcc -o Tests/build/mul Tests/mul.c Tests/build/printd.o
+./Tests/build/mul
+
+echo "
+Tests/neg.c"
+gcc -o Tests/build/neg Tests/neg.c Tests/build/printd.o
+./Tests/build/neg
+
+echo "
+Tests/rsh.c"
+gcc -o Tests/build/rsh Tests/rsh.c Tests/build/printd.o
+./Tests/build/rsh
+
+echo "
+Tests/sub.c"
+gcc -o Tests/build/sub Tests/sub.c Tests/build/printd.o
+./Tests/build/sub
+
+echo "
+Tests/switch.c"
+gcc -o Tests/build/switch Tests/switch.c Tests/build/printd.o
+./Tests/build/switch
+
+echo "
+Tests/tableaux.c"
+gcc -o Tests/build/tableaux Tests/tableaux.c Tests/build/printd.o
+./Tests/build/tableaux
+
+echo "
+Tests/tableaux-multi.c"
+gcc -o Tests/build/tableaux-multi Tests/tableaux-multi.c Tests/build/printd.o
+./Tests/build/tableaux-multi
+
+echo "
+Tests/test.c"
+gcc -o Tests/build/test Tests/test.c Tests/build/printd.o
+./Tests/build/test
+
+echo "
+Tests/variables.c"
+gcc -o Tests/build/variables Tests/variables.c Tests/build/printd.o
+./Tests/build/variables
+
+
+
+
+
+

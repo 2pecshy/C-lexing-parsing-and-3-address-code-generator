@@ -1,0 +1,14 @@
+Ce répertoire contient tous les fichiers tests C qui seront utilisés pour évaluer votre compilateur (à l'exeption du fichier printd.c).
+Basez-vous donc sur ces programmes C pour tester votre compilateur.
+
+Le fichier printd.c n'est pas un programme test,  c'est un fichier qui contient l'implémentation de la fonction printd est déclarée externe et référencée dans les programmes tests.
+Voici comment utiliser ce fichier printd.c pour générer un exécutable par la suite: je suppose que votre compilateur s'appelle "mongcc"
+
+- exécuter votre compilateur mongcc sur un fichier de test comme add.c : si votre compilateur est bon, un code trois adresses nommé add_3d.c est généré
+- ensuite, utilisez le compilateur gcc standard pour générer un code objet comme suit : gcc -c add_3d.c -o add_3d.o
+- ensuite, faîte une édition de lien avec le fichier printd.o (c'est le fichier objet de printd.c, généré avec gcc également) : gcc add_3d.o printd.o -o add_3d
+  Ceci vous crééra un exécutable add_3d. Exécutez le et vérifiez qu'il affiche les mêmes résultat que l'exécutable généré entièrement par gcc.
+- L'exéutable généré par gcc peut s'obtenir de la façon suivante : gcc add.c pintd.d -o add_gcc
+
+Si votre compilateur est vraiment bon, il génèrera du code correct pour tous les programmes tests.
+S.T.

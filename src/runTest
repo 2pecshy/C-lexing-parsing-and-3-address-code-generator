@@ -1,0 +1,127 @@
+#!/bin/bash
+
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==================================TESTS===================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+gcc -o Tests/build/printd.o -c Tests/printd.c
+
+echo "
+Tests/add.c"
+./projet Tests/add.c
+gcc -o Tests/build/add_3d Tests/add_3d.c Tests/build/printd.o
+./Tests/build/add_3d
+
+echo "
+Tests/break.c"
+./projet Tests/break.c
+gcc -o Tests/build/break_3d Tests/break_3d.c Tests/build/printd.o
+./Tests/build/break_3d
+
+echo "
+Tests/compteur.c"
+./projet Tests/compteur.c
+gcc -o Tests/build/compteur_3d Tests/compteur_3d.c Tests/build/printd.o
+./Tests/build/compteur_3d
+
+echo "
+Tests/cond.c"
+./projet Tests/cond.c
+gcc -o Tests/build/cond_3d Tests/cond_3d.c Tests/build/printd.o
+./Tests/build/cond_3d
+
+echo "
+Tests/div.c"
+./projet Tests/div.c
+gcc -o Tests/build/div_3d Tests/div_3d.c Tests/build/printd.o
+./Tests/build/div_3d
+
+echo "
+Tests/exempleCfe.c"
+./projet Tests/exempleCfe.c
+gcc -o Tests/build/exempleCfe_3d Tests/exempleCfe_3d.c Tests/build/printd.o
+./Tests/build/exempleCfe_3d
+
+echo "
+Tests/expr.c"
+./projet Tests/expr.c
+gcc -o Tests/build/expr_3d Tests/expr_3d.c Tests/build/printd.o
+./Tests/build/expr_3d
+
+echo "
+Tests/functions.c"
+./projet Tests/functions.c
+gcc -o Tests/build/functions_3d Tests/functions_3d.c Tests/build/printd.o
+./Tests/build/functions_3d
+
+echo "
+Tests/loops.c"
+./projet Tests/loops.c
+gcc -o Tests/build/loops_3d Tests/loops_3d.c Tests/build/printd.o
+./Tests/build/loops_3d
+
+echo "
+Tests/lsh.c"
+./projet Tests/lsh.c
+gcc -o Tests/build/lsh_3d Tests/lsh_3d.c Tests/build/printd.o
+./Tests/build/lsh_3d
+
+echo "
+Tests/mul.c"
+./projet Tests/mul.c
+gcc -o Tests/build/mul_3d Tests/mul_3d.c Tests/build/printd.o
+./Tests/build/mul_3d
+
+echo "
+Tests/neg.c"
+./projet Tests/neg.c
+gcc -o Tests/build/neg_3d Tests/neg_3d.c Tests/build/printd.o
+./Tests/build/neg_3d
+
+echo "
+Tests/rsh.c"
+./projet Tests/rsh.c
+gcc -o Tests/build/rsh_3d Tests/rsh_3d.c Tests/build/printd.o
+./Tests/build/rsh_3d
+
+echo "
+Tests/sub.c"
+./projet Tests/sub.c
+gcc -o Tests/build/sub_3d Tests/sub_3d.c Tests/build/printd.o
+./Tests/build/sub_3d
+
+echo "
+Tests/switch.c"
+./projet Tests/switch.c
+gcc -o Tests/build/switch_3d Tests/switch_3d.c Tests/build/printd.o
+./Tests/build/switch_3d
+
+echo "
+Tests/tableaux.c"
+./projet Tests/tableaux.c
+gcc -o Tests/build/tableaux_3d Tests/tableaux_3d.c Tests/build/printd.o
+./Tests/build/tableaux_3d
+
+echo "
+Tests/tableaux-multi.c"
+./projet Tests/tableaux-multi.c
+gcc -o Tests/build/tableaux-multi_3d Tests/tableaux-multi_3d.c Tests/build/printd.o
+./Tests/build/tableaux-multi_3d
+
+echo "
+Tests/test.c"
+./projet Tests/test.c
+gcc -o Tests/build/test_3d Tests/test_3d.c Tests/build/printd.o
+./Tests/build/test_3d
+
+echo "
+Tests/variables.c"
+./projet Tests/variables.c
+gcc -o Tests/build/variables_3d Tests/variables_3d.c Tests/build/printd.o
+./Tests/build/variables_3d
+
+
+
+
+
+
