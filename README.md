@@ -46,71 +46,73 @@ lancer les tests généré entièrement par gcc :
 
 génération du for:
 
-tag_debut: ;
-	if(not(condition)) 
-		goto tag_fin;
-		{instruction;
-		afféctation de la condition;}
-	goto tag_debut;
-tag_fin;
-suite prgm....
+	tag_debut: ;
+		if(not(condition)) 
+			goto tag_fin;
+			{instruction;
+			afféctation de la condition;}
+		goto tag_debut;
+	tag_fin
+	suite prgm....
 
 ---------------------------------------------------
 génération du while:
 
-goto L1
-L2 : < corps_de_la_boucle >
-L1 : if ( < test > ) goto L2
+	goto L1
+	L2 : < corps_de_la_boucle >
+	L1 : if ( < test > ) goto L2
 
 ---------------------------------------------------
-génération du if
-if (! < test > ) goto L
-< instruction(s) > /* du then */
-L : < suite_du_programme >
+
+génération du if:
+
+	if (! < test > ) goto L
+	< instruction(s) > /* du then */
+	L : < suite_du_programme >
 
 ---------------------------------------------------
+
 génération du swhich case:
-//ex:
 
-int i = 2;
-shitch(i){
+	int i = 2;
+	shitch(i){
 
-	case 1: break;
-	case 2: i = i + 1;
-	case 3: i = -3;
-	default: i = i;
-}
-//gen:
+		case 1: break;
+		case 2: i = i + 1;
+		case 3: i = -3;
+		default: i = i;
+	}
+	//gen:
 
-if(!(i == 1)) goto L1;	//case 1:
-	goto L2;	//break
-	goto L3;
-L1: ;
-if(!(i == 2)) goto L5;  //case 2;
-L3: ;
-	i = i + 1;
-	goto L4;
-L5: ;
-if(!(i == 3)) goto L6;  //case 3;
-L4: ;
-	i = -3;
-	goto L7;
-L6: ;			//default
-L7: ;
-	i = i;
-L2: ;
-suite prgm...
+	if(!(i == 1)) goto L1;	//case 1:
+		goto L2;	//break
+		goto L3;
+	L1: ;
+	if(!(i == 2)) goto L5;  //case 2;
+	L3: ;
+		i = i + 1;
+		goto L4;
+	L5: ;
+	if(!(i == 3)) goto L6;  //case 3;
+	L4: ;
+		i = -3;
+		goto L7;
+	L6: ;			//default
+	L7: ;
+		i = i;
+	L2: ;
+	suite prgm...
 
 ---------------------------------------------------
 génération du break:
 
--le break est transformé en un goto qui pointe hors d'une boucle for, while ou d'un switch case.
+	-le break est transformé en un goto qui pointe hors d'une boucle for, while ou d'un switch case.
 
 ---------------------------------------------------
 génération du code 3 adresses:
 
--les déclarations des variables tmp sont déclarées en local.
--pas d'optimisation sur le nombre de variable tmp générée (réutilisation de variable).
+	-les déclarations des variables tmp sont déclarées en local.
+	-pas d'optimisation sur le nombre de variable tmp générée (réutilisation de variable).
 
 ---------------------------------------------------
 génération des tableau:
