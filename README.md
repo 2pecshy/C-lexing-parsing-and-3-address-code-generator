@@ -1,4 +1,4 @@
-# code-generation-3-address-code-and-more
+# C lexing, parsing and 3 address code generator
 
 Projet compilation
 
